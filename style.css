@@ -14,6 +14,7 @@ body {
 
 /* Banner Section */
 .banner {
+    background-image: url('1500x500 1.jpg'); /* Link to the image */
     width: 100%;
     height: 300px; /* Adjust as needed */
     overflow: hidden;
