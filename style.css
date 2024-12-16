@@ -1,12 +1,38 @@
 body {
-  background-color: #181818; /* Example dark background */
-  color: #ffffff; /* Example white text */
+  background-color: #181818; 
+  color: #ffffff; 
   font-family: sans-serif;
+  margin: 0; /* Remove default body margins */
 }
 
 header {
-  background-image: url("1500x500 1.jpg");
+  background-image: url("images/banner.jpg"); /* Replace with your banner image */
   background-size: cover; 
   text-align: center;
+  padding: 20px;
+  position: relative; 
+}
+
+.character-image {
+  position: absolute;
+  bottom: 20px; 
+  width: 100px; 
+}
+
+.left-image { /* For the left image */
+  left: 20px;  
+}
+
+.right-image { /* For the right image */
+  right: 20px; 
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em; /* Adjust font size as needed */
+  margin-top: 20px; /* Add space above the heading */
+}
+
+main {
   padding: 20px;
 }
