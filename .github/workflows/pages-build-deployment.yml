@@ -12,8 +12,8 @@ permissions:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-24.04
-    environment: github-pages  # Add this line
+    runs-on: ubuntu-latest
+    environment: github-pages
     steps:
       - name: Checkout
         uses: actions/checkout@v3
