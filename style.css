@@ -9,7 +9,7 @@ header {
   background-image: url("1500x500.jpg"); /* Replace with your banner image */
   background-size: cover; 
   text-align: center;
-  padding: 20px;
+  padding: 40px;
   position: relative; 
 }
 
@@ -28,7 +28,7 @@ header {
 }
 
 h1 {
-  text-align: center;
+  text-align: Left;
   font-size: 2.5em; /* Adjust font size as needed */
   margin-top: 20px; /* Add space above the heading */
 }
