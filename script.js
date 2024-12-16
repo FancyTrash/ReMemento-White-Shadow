@@ -4,13 +4,13 @@ const closeButton = document.querySelector('.close-button');
 const dots = document.querySelector('.dots');
 
 searchButton.addEventListener('click', () => {
-  searchButton.style.display = 'none'; 
+  searchButton.style.display = 'none';
   searchBox.style.display = 'inline-block';
 });
 
 closeButton.addEventListener('click', () => {
   searchBox.style.display = 'none';
-  searchButton.style.display = 'inline-block'; 
+  searchButton.style.display = 'inline-block';
 });
 
 dots.addEventListener('click', () => {
