@@ -1,73 +1,91 @@
-/* Reset default margins */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Basic Body Styling */
 body {
-    background-color: #181818;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    text-align: center;
+  font-family: sans-serif; 
+  margin: 0; 
+  background-color: #181818; /* Dark background color */
+  color: #ffffff; /* Light text color for contrast */
 }
 
-/* Banner Section */
-.banner {
-    background-image: url('1500x500 1.jpg'); /* Link to the image */
-    width: 100%;
-    height: 300px; /* Adjust as needed */
-    overflow: hidden;
-    position: relative;
+/* Top Bar */
+.top-bar {
+  background-color: #282828; 
+  padding: 10px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
 }
 
-.banner-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.search-icon {
+  display: flex; 
+  align-items: center; 
 }
 
-/* Profile Picture */
-.profile-pic img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 3px solid #fff;
-    position: absolute;
-    top: 240px; /* Adjust based on the banner size */
-    left: 50%;
-    transform: translateX(-50%);
+.search-icon > span {
+  margin-left: 10px; 
 }
 
-/* Title */
+.search-box { 
+  display: none; 
+  padding: 8px; 
+  border-radius: 5px; /* Add rounded corners to the container */
+  background-color: #282828; 
+  color: white; 
+}
+
+.search-box input { 
+  background-color: #383838; /* Slightly lighter gray background for input */
+  border: none; 
+  outline: none; 
+  color: white;
+  border: 1.5px solid #555; /* Add a light gray border */
+  padding: 5px; /* Add some padding within the input field */
+  border-radius: 3px; /* Slightly rounded corners for the input field */
+  width: 150px; /* Set a default width for the input field */
+}
+
+.search-box .close-button {
+  cursor: pointer;
+  margin-left: 5px; 
+}
+
 .title {
-    font-size: 2.5rem;
-    margin-top: 60px;
-    font-family: "Old English Text MT", serif; /* Adjust if needed */
+  font-weight: bold;
 }
 
-/* Content Description */
-.description {
-    margin: 50px auto;
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+/* Banner Image */
+.banner {
+  width: 100%; 
+  overflow: hidden; 
 }
 
-.description p {
-    font-size: 1.1rem;
-    line-height: 1.5;
+.banner img {
+  width: 100%; 
+  display: block; 
 }
 
-.description a {
-    color: #00aaff;
-    text-decoration: none;
+/* Divider */
+hr {
+  border: 1px solid #555; /* Darker divider color */
+  margin: 15px 0; 
 }
 
-.chibi-img {
-    width: 150px;
-    height: auto;
-    border-radius: 10px;
+/* Main Content Area */
+.main-content {
+  padding: 20px; 
+}
+
+.game-info {
+  display: flex; 
+  align-items: center; 
+}
+
+.game-info img {
+  width: 100px; 
+  height: 100px; 
+  border-radius: 10px; 
+  margin-right: 20px; 
+}
+
+.game-info h2 {
+  margin: 0 0 10px 0; 
 }
