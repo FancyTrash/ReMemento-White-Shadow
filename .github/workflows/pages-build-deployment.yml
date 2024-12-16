@@ -3,16 +3,16 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main 
+      - main
 
 permissions:
   contents: read
   pages: write
-  id-token: write  # Grant the necessary permission
+  id-token: write
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-24.04  # Use Ubuntu 24.04
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -21,7 +21,7 @@ jobs:
         uses: actions/configure-pages@v3
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4  # Updated to v4
         with:
           path: '.'
 
