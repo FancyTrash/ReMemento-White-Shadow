@@ -18,6 +18,5 @@ closeButton.addEventListener("click", () => {
 
 // Toggle the visibility of the dropdown menu when dots are clicked
 dots.addEventListener("click", () => {
-  // Toggle dropdown visibility
   dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
 });
