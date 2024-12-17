@@ -7,20 +7,25 @@
 
 /* Basic Body Styling */
 body {
-  font-family: sans-serif; 
-  margin: 0; 
+  font-family: sans-serif;
+  margin: 0;
   background-color: #181818;
-  color: #ffffff; 
-  line-height: 1.6; /* Added for better readability */
+  color: #ffffff;
+  line-height: 1.6;
 }
 
 /* Top Bar */
 .top-bar {
-  background-color: #282828; 
+  background-color: #282828;
   padding: 10px;
   display: flex;
-  justify-content: space-between; 
-  align-items: center; 
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .search-icon {
@@ -29,24 +34,24 @@ body {
 }
 
 .search-icon > span {
-  margin-left: 10px; 
+  margin-left: 10px;
 }
 
-.search-box { 
-  display: none; 
-  padding: 8px; 
+.search-box {
+  display: none;
+  padding: 8px;
   border-radius: 5px;
   background-color: #282828;
-  color: white; 
+  color: white;
   border: 1px solid #555;
 }
 
-.search-box input { 
+.search-box input {
   background-color: #383838;
   border: none;
   outline: none;
   color: white;
-  padding: 5px; 
+  padding: 5px;
   border-radius: 3px;
   width: 150px;
   -webkit-appearance: none; /* Remove input styling for Safari */
@@ -57,10 +62,6 @@ body {
   margin-left: 5px;
 }
 
-.title {
-  font-weight: bold;
-}
-
 /* Banner Image */
 .banner {
   width: 100%;
@@ -68,14 +69,14 @@ body {
 }
 
 .banner img {
-  width: 100%; 
+  width: 100%;
   display: block;
-  object-fit: cover; /* Ensures image fits well */
+  object-fit: cover;
 }
 
 /* Divider */
 hr {
-  border: 1px solid #555; 
+  border: 1px solid #555;
   margin: 15px 0;
 }
 
@@ -84,15 +85,16 @@ hr {
   padding: 20px;
 }
 
+/* Game Info */
 .game-info {
   display: flex;
   align-items: center;
 }
 
 .game-info img {
-  width: 100px; 
+  width: 100px;
   height: 100px;
-  border-radius: 10px; 
+  border-radius: 10px;
   margin-right: 20px;
 }
 
@@ -100,8 +102,29 @@ hr {
   margin: 0 0 10px 0;
 }
 
-git add .                       # Stages all changes
-git commit -m "Fix: Update CSS for GitHub Pages"  # Saves your changes with a message
-git push origin main            # Pushes changes to your GitHub repository
+.game-info p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
 
-Fix: Correct file paths and ensure all assets are included
+/* Custom Styles for Responsiveness */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .search-box input {
+    width: 100%;
+  }
+  
+  .game-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .game-info img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
