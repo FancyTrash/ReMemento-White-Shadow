@@ -1,41 +1,130 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ReMemento: White Shadow Guide</title>
-  <link rel="stylesheet" href="style.css"> <!-- Updated link to correct CSS file -->
-</head>
-<body>
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <div class="top-bar">
-    <span class="title">ReMemento: White Shadow Guide</span>
-    <div class="search-icon">
-      <span class="search-button">&#128269;</span> 
-      <span class="search-box">
-        <input type="text" placeholder="Search...">
-        <span class="close-button">x</span> 
-      </span>
-      <span class="dots">&#8230;</span> 
-    </div>
-  </div>
+/* Basic Body Styling */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #181818;
+  color: #ffffff;
+  line-height: 1.6;
+}
 
-  <div class="banner">
-    <img src="/1500x500 1.jpg" alt="Banner Image"> 
-  </div>
+/* Top Bar */
+.top-bar {
+  background-color: #282828;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  <hr> 
+.title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
 
-  <div class="main-content">
-    <div class="game-info">
-      <img src="/H0E0mS7Y_400x400.png" alt="Game Profile">
-      <div class="description">
-        <h2>ReMemento: White Shadow Guide</h2>
-        <p>Hello Wardens! Thank you for considering to look at my site and I hope you find what you're looking for here! If not, please let me know in my suggestions box through this [link] and I wish you all luck on your adventure!</p>
-      </div>
-    </div>
-  </div> 
+.search-icon {
+  display: flex;
+  align-items: center;
+}
 
-  <script src="/script.js"></script> 
-</body>
-</html>
+.search-icon > span {
+  margin-left: 10px;
+}
+
+.search-box {
+  display: none;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #282828;
+  color: white;
+  border: 1px solid #555;
+}
+
+.search-box input {
+  background-color: #383838;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  width: 150px;
+  -webkit-appearance: none; /* Remove input styling for Safari */
+}
+
+.search-box .close-button {
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+/* Banner Image */
+.banner {
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Divider */
+hr {
+  border: 1px solid #555;
+  margin: 15px 0;
+}
+
+/* Main Content Area */
+.main-content {
+  padding: 20px;
+}
+
+/* Game Info */
+.game-info {
+  display: flex;
+  align-items: center;
+}
+
+.game-info img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.game-info h2 {
+  margin: 0 0 10px 0;
+}
+
+.game-info p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Custom Styles for Responsiveness */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .search-box input {
+    width: 100%;
+  }
+  
+  .game-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .game-info img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
