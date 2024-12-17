@@ -1,17 +1,15 @@
-const searchButton = document.querySelector('.search-button');
-const searchBox = document.querySelector('.search-box');
-const closeButton = document.querySelector('.close-button');
+const searchButton = document.getElementById("searchButton");
+const searchBox = document.getElementById("searchBox");
+const closeButton = document.getElementById("closeButton");
 
-// Show the Search Box
-searchButton.addEventListener('click', () => {
-  searchBox.style.display = 'flex'; // Make the search box visible
-  searchBox.classList.add('show'); // Smooth opacity transition
-  searchButton.style.display = 'none'; // Hide the search button
+// Show the search box and hide the search button
+searchButton.addEventListener("click", () => {
+  searchButton.style.display = "none"; // Hide search button
+  searchBox.style.display = "flex"; // Show search box
 });
 
-// Hide the Search Box
-closeButton.addEventListener('click', () => {
-  searchBox.style.display = 'none'; // Hide the search box
-  searchBox.classList.remove('show'); // Remove smooth transition class
-  searchButton.style.display = 'inline-block'; // Show the search button
+// Hide the search box and show the search button
+closeButton.addEventListener("click", () => {
+  searchBox.style.display = "none"; // Hide search box
+  searchButton.style.display = "inline-block"; // Show search button
 });
