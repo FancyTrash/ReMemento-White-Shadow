@@ -1,21 +1,17 @@
 const searchButton = document.querySelector('.search-button');
-const searchBox = document.querySelector('.search-box'); 
+const searchBox = document.querySelector('.search-box');
 const closeButton = document.querySelector('.close-button');
-const dots = document.querySelector('.dots');
 
-// Show Search Box
+// Show the Search Box
 searchButton.addEventListener('click', () => {
-  searchButton.style.display = 'none';
-  searchBox.classList.add('show');
+  searchBox.style.display = 'flex'; // Make the search box visible
+  searchBox.classList.add('show'); // Smooth opacity transition
+  searchButton.style.display = 'none'; // Hide the search button
 });
 
-// Hide Search Box
+// Hide the Search Box
 closeButton.addEventListener('click', () => {
-  searchBox.classList.remove('show');
-  searchButton.style.display = 'inline-block';
-});
-
-// Dropdown Menu Placeholder
-dots.addEventListener('click', () => {
-  alert("Dropdown menu will be added here!");
+  searchBox.style.display = 'none'; // Hide the search box
+  searchBox.classList.remove('show'); // Remove smooth transition class
+  searchButton.style.display = 'inline-block'; // Show the search button
 });
