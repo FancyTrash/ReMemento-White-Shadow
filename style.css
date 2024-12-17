@@ -74,6 +74,39 @@ body {
   color: white;
 }
 
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none; /* Hidden by default */
+  background-color: #282828;
+  position: absolute;
+  right: 20px;
+  top: 50px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+}
+
+.dropdown-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dropdown-menu ul li {
+  margin: 10px 0;
+}
+
+.dropdown-menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.dropdown-menu ul li a:hover {
+  background-color: #444;
+  padding: 5px;
+}
+
+
 /* Banner */
 .banner {
   width: 100%;
