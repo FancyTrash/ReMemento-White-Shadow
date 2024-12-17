@@ -33,17 +33,20 @@ body {
   align-items: center;
 }
 
-.search-icon > span {
-  margin-left: 10px;
-}
-
 .search-box {
   display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* Smooth fade-in/out */
   padding: 8px;
   border-radius: 5px;
   background-color: #282828;
   color: white;
   border: 1px solid #555;
+}
+
+.search-box.show {
+  display: inline-block;
+  opacity: 1;
 }
 
 .search-box input {
@@ -54,23 +57,27 @@ body {
   padding: 5px;
   border-radius: 3px;
   width: 150px;
-  -webkit-appearance: none; /* Remove input styling for Safari */
 }
 
 .search-box .close-button {
   cursor: pointer;
   margin-left: 5px;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 1rem;
 }
 
 /* Banner Image */
 .banner {
   width: 100%;
   overflow: hidden;
+  height: 300px; /* Adjust height */
 }
 
 .banner img {
   width: 100%;
-  display: block;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -113,11 +120,11 @@ hr {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .search-box input {
     width: 100%;
   }
-  
+
   .game-info {
     flex-direction: column;
     align-items: flex-start;
