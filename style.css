@@ -104,3 +104,4 @@ git add .                       # Stages all changes
 git commit -m "Fix: Update CSS for GitHub Pages"  # Saves your changes with a message
 git push origin main            # Pushes changes to your GitHub repository
 
+Fix: Correct file paths and ensure all assets are included
