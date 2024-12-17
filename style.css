@@ -7,19 +7,20 @@
 
 /* Basic Body Styling */
 body {
-  font-family: sans-serif;
-  margin: 0;
+  font-family: sans-serif; 
+  margin: 0; 
   background-color: #181818;
-  color: #ffffff;
+  color: #ffffff; 
+  line-height: 1.6; /* Added for better readability */
 }
 
 /* Top Bar */
 .top-bar {
-  background-color: #282828;
+  background-color: #282828; 
   padding: 10px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; 
+  align-items: center; 
 }
 
 .search-icon {
@@ -28,15 +29,15 @@ body {
 }
 
 .search-icon > span {
-  margin-left: 10px;
+  margin-left: 10px; 
 }
 
 .search-box { 
-  display: none;
-  padding: 8px;
+  display: none; 
+  padding: 8px; 
   border-radius: 5px;
   background-color: #282828;
-  color: white;
+  color: white; 
   border: 1px solid #555;
 }
 
@@ -45,9 +46,10 @@ body {
   border: none;
   outline: none;
   color: white;
-  padding: 5px;
+  padding: 5px; 
   border-radius: 3px;
   width: 150px;
+  -webkit-appearance: none; /* Remove input styling for Safari */
 }
 
 .search-box .close-button {
@@ -66,13 +68,14 @@ body {
 }
 
 .banner img {
-  width: 100%;
+  width: 100%; 
   display: block;
+  object-fit: cover; /* Ensures image fits well */
 }
 
 /* Divider */
 hr {
-  border: 1px solid #555;
+  border: 1px solid #555; 
   margin: 15px 0;
 }
 
@@ -87,9 +90,9 @@ hr {
 }
 
 .game-info img {
-  width: 100px;
+  width: 100px; 
   height: 100px;
-  border-radius: 10px
+  border-radius: 10px; 
   margin-right: 20px;
 }
 
