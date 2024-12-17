@@ -34,8 +34,10 @@ body {
 }
 
 .search-box {
-  display: none;
+  display: none; /* Hidden by default */
   opacity: 0;
+  align-items: center; /* Center items inside the search box */
+  gap: 5px; /* Small space between the input and close button */
   transition: opacity 0.3s ease-in-out; /* Smooth fade-in/out */
   padding: 8px;
   border-radius: 5px;
@@ -45,8 +47,7 @@ body {
 }
 
 .search-box.show {
-  display: inline-block;
-  opacity: 1;
+  opacity: 1; /* Fade in when class is added */
 }
 
 .search-box input {
