@@ -80,6 +80,13 @@ body {
     object-fit: cover; 
 }
 
+/* If you have background images in the future, update here */
+.banner {
+    background-image: url('assets/your-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
 hr {
     border: 1px solid #555;
     margin: 15px 0;
@@ -99,6 +106,13 @@ hr {
     height: 100px;
     border-radius: 10px;
     margin-right: 20px;
+}
+
+/* If you want to use images as backgrounds for game info items, update here */
+.game-info {
+    background-image: url('assets/your-game-info-background.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .game-info h2 {
