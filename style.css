@@ -73,19 +73,15 @@ body {
   width: 100%;
   overflow: hidden;
   height: 100px; /* Added height to the banner */
+  background-image: url('assets/your-background-image.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .banner img {
   width: 100%;
   display: block;
   object-fit: cover;
-}
-
-/* If you have background images in the future, update here */
-.banner {
-  background-image: url('assets/your-background-image.jpg');
-  background-size: cover;
-  background-position: center;
 }
 
 hr {
