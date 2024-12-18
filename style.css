@@ -69,19 +69,22 @@ body {
   font-size: 1.2rem;
 }
 
-#mybanner { 
+.banner {
   width: 100%;
   overflow: hidden;
-  height: 100px; /* Added height to the banner */
-  background-image: url('assets/your-background-image.jpg');
-  background-size: cover;
-  background-position: center;
 }
 
 .banner img {
   width: 100%;
   display: block;
   object-fit: cover;
+}
+
+/* If you have background images in the future, update here */
+.banner {
+  background-image: url('assets/your-background-image.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 hr {
@@ -94,35 +97,22 @@ hr {
 }
 
 .game-info {
-  position: relative; /* Added for absolute positioning */
-  width: 75%; /* Adjust size as needed */
-  margin: 0 auto;
-}
-
-.gameplay-image {
-  width: 100%;
-  opacity: 0.2; /* Adjust transparency as needed */
-  display: block;
-}
-
-.game-details {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
-  gap: 20px;
 }
 
-.game-details img {
-  width: 80px;
-  height: 80px;
+.game-info img {
+  width: 100px;
+  height: 100px;
   border-radius: 10px;
+  margin-right: 20px;
+}
+
+/* If you want to use images as backgrounds for game info items, update here */
+.game-info {
+  background-image: url('assets/your-game-info-background.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .game-info h2 {
