@@ -1,22 +1,27 @@
 const searchButton = document.getElementById("searchButton");
 const searchBox = document.getElementById("searchBox");
 const closeButton = document.getElementById("closeButton");
-const dots = document.getElementById("dots"); // Dots element
-const dropdownMenu = document.getElementById("dropdownMenu"); // Dropdown menu
 
-// Show the search box and hide the search button
+// Search box toggle
 searchButton.addEventListener("click", () => {
-  searchButton.style.display = "none"; // Hide search button
-  searchBox.style.display = "flex"; // Show search box
+    searchBox.style.display = "flex"; 
+    searchButton.style.display = "none";
 });
 
-// Hide the search box and show the search button
 closeButton.addEventListener("click", () => {
-  searchBox.style.display = "none"; // Hide search box
-  searchButton.style.display = "inline-block"; // Show search button
+    searchBox.style.display = "none";
+    searchButton.style.display = "inline-block"; 
 });
 
-// Toggle the visibility of the dropdown menu when dots are clicked
-dots.addEventListener("click", () => {
-  dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+// Sidebar toggle
+const sidebar = document.getElementById("sidebar");
+const sidebarToggle = document.getElementById("sidebarToggle");
+const closeSidebar = document.getElementById("closeSidebar");
+
+sidebarToggle.addEventListener("click", () => {
+    sidebar.style.right = "0"; 
+});
+
+closeSidebar.addEventListener("click", () => {
+    sidebar.style.right = "-300px"; 
 });
