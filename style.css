@@ -76,6 +76,7 @@ body {
 
 .banner img {
   width: 100%;
+  opacity: 0.5;
   display: block;
   object-fit: cover;
 }
