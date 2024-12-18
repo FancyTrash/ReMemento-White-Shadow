@@ -69,10 +69,10 @@ body {
   font-size: 1.2rem;
 }
 
-.banner {
+.banner { 
   width: 100%;
-  height: 250px;
   overflow: hidden;
+  height: 300px; /* Added height to the banner */
 }
 
 .banner img {
