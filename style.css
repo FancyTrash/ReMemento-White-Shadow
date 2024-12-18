@@ -1,167 +1,203 @@
 /* CSS Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Basic Body Styling */
 body {
-  font-family: sans-serif;
-  margin: 0;
-  background-color: #181818;
-  color: #ffffff;
-  line-height: 1.6;
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #181818;
+    color: #ffffff;
+    line-height: 1.6;
 }
 
-/* Top Bar */
 .top-bar {
-  background-color: #282828;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
+    background-color: #121212;
+    padding: 10px;
+    display: flex;
+    align-items: center; 
+    position: relative; 
 }
 
 .title {
-  font-weight: bold;
-  font-size: 1.5rem;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .search-icon {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    margin-left: auto; 
+}
+
+.search-button {
+    background-color: transparent;
+    border: none;                
+    padding: 0;                  
+    cursor: pointer;             
+    font-size: 1.2em;            
 }
 
 .search-box {
-  display: none;
-  padding: 8px;
-  border-radius: 5px;
-  background-color: #282828;
-  color: white;
-  border: 1px solid #555;
-  position: absolute;
-  right: 30px;
-  top: 5px;
-  display: flex;
-  align-items: center;
+    display: none; 
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #282828;
+    color: white;
+    border: 0px solid #555;
+    align-items: center;
 }
 
 .search-box input {
-  background-color: #383838;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 5px;
-  border-radius: 3px;
-  width: 150px;
+    background-color: #383838;
+    border: 1.5px solid #555;
+    outline: none;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    width: 150px;
 }
 
 .search-box .close-button {
-  cursor: pointer;
-  margin-left: 5px;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 5px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
 }
 
-/* Banner Image */
 .banner {
-  width: 100%;
-  overflow: hidden;
+    width: 100%;
+    overflow: hidden; 
 }
 
 .banner img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
+    width: 100%;
+    display: block;
+    object-fit: cover; 
 }
 
-/* Divider */
 hr {
-  border: 1px solid #555;
-  margin: 15px 0;
+    border: 1px solid #555;
+    margin: 15px 0;
 }
 
-/* Main Content Area */
 .main-content {
-  padding: 20px;
+    padding: 20px;
 }
 
-/* Game Info */
 .game-info {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .game-info img {
-  width: 100px;
-  height: 100px;
-  border-radius: 10px;
-  margin-right: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 20px;
 }
 
 .game-info h2 {
-  margin: 0 0 10px 0;
+    margin: 0 0 10px 0;
 }
 
 .game-info p {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-/* Dropdown Menu */
-.dropdown-menu {
-  display: none; /* Hidden by default */
-  background-color: #282828;
-  position: absolute;
-  right: 20px;
-  top: 50px;
-  border-radius: 5px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-  padding: 10px;
-}
-
-.dropdown-menu ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.dropdown-menu ul li {
-  margin: 10px 0;
-}
-
-.dropdown-menu ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 1rem;
-}
-
-.dropdown-menu ul li a:hover {
-  background-color: #444;
-  padding: 5px;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 /* Custom Styles for Responsiveness */
 @media (max-width: 768px) {
-  .top-bar {
-    flex-direction: column;
-    text-align: center;
-  }
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+    }
 
-  .search-box input {
-    width: 100%;
-  }
+    .search-box input {
+        width: 100%;
+    }
 
-  .game-info {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    .game-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-  .game-info img {
-    margin-right: 0;
-    margin-bottom: 15px;
-  }
+    .game-info img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px; 
+    width: 250px;
+    height: 100%;
+    background-color: #282828;
+    color: #ffffff;
+    box-shadow: -3px 0 6px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding-top: 20px;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #444;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.sidebar-header .close-sidebar {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.sidebar-menu li {
+    padding: 10px 15px;
+}
+
+.sidebar-menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    transition: color 0.2s ease;
+}
+
+.sidebar-menu li a:hover {
+    color: #ff9800;
+    background-color: #383838;
+    border-radius: 5px;
+}
+
+.sidebar-toggle {
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 10px;
+    transition: transform 0.2s ease;
+    color: #ffffff;
+    /* margin-left: auto;  Remove this */ 
+}
+
+.sidebar-toggle:hover {
+    transform: scale(1.1); 
 }
