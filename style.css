@@ -21,6 +21,7 @@ body {
   position: relative;
   box-sizing: border-box; 
   height: 15px; /* Add a fixed height */
+  line-height: 15px; 
 }
 
 .title {
