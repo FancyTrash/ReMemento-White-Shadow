@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Apply border-box to all elements */
 }
 
 body {
@@ -15,7 +15,7 @@ body {
 
 .top-bar {
   background-color: #121212;
-  padding: 2px;
+  padding: 3px; /* Adjust padding as needed */
   display: flex;
   align-items: center;
   position: relative;
