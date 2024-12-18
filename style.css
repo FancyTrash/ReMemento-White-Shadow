@@ -72,7 +72,7 @@ body {
 .banner { 
   width: 100%;
   overflow: hidden;
-  height: 300px; /* Added height to the banner */
+  height: 100px; /* Added height to the banner */
 }
 
 .banner img {
