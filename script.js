@@ -13,7 +13,7 @@ closeButton.addEventListener("click", () => {
     searchButton.style.display = "inline-block"; 
 });
 
-// Sidebar toggle
+// Sidebar toggle (this code should remain)
 const sidebar = document.getElementById("sidebar");
 const sidebarToggle = document.getElementById("sidebarToggle");
 const closeSidebar = document.getElementById("closeSidebar");
