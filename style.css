@@ -15,13 +15,13 @@ body {
 
 .top-bar {
   background-color: #121212;
-  padding: 3px; /* Adjust padding as needed */
+  padding: 0px; /* Adjust padding as needed */
   display: flex;
   align-items: center;
   position: relative;
   box-sizing: border-box; 
-  height: 20px; /* Add a fixed height */
-  line-height: 20px; 
+  height: 25px; /* Add a fixed height */
+  line-height: 25px; 
 }
 
 .title {
