@@ -5,28 +5,29 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Prevent double scrollbars */
+}
+
 body {
   font-family: sans-serif;
-  margin: 0;
   background-color: #181818;
   color: #ffffff;
   line-height: 1.6;
 }
 
+/* Top Bar */
 .top-bar {
   background-color: #121212;
   padding: 3px;
   display: flex;
   align-items: center;
-  position: relative;
+  position: relative; /* Ensure the search box aligns properly */
   box-sizing: border-box; 
   height: 40px;  
   line-height: 40px;  
-}
-
-.top-bar * { 
-  height: auto !important; 
-  min-height: 0 !important; 
 }
 
 .title {
@@ -49,7 +50,7 @@ body {
 }
 
 .search-box {
-  display: none; 
+  display: none;
   padding: 8px;  
   border-radius: 5px;
   background-color: #282828;
@@ -58,7 +59,8 @@ body {
   align-items: center;
   position: absolute; 
   top: 100%; 
-  right: 0; 
+  right: 0;
+  z-index: 10;
 }
 
 .search-box input {
@@ -69,6 +71,7 @@ body {
   padding: 6px;  
   border-radius: 3px;
   width: 150px;
+  max-width: 100%;
   font-size: 1.5rem;  
 }
 
@@ -81,22 +84,11 @@ body {
   font-size: 1.7rem;  
 }
 
-.banner {
-  width: 100%;
-  overflow: hidden;
-}
-
+/* Banner */
 .banner img {
   width: 100%;
   display: block;
   object-fit: cover;
-}
-
-/* If you have background images in the future, update here */
-.banner {
-  background-image: url('assets/your-background-image.jpg');
-  background-size: cover;
-  background-position: center;
 }
 
 hr {
@@ -104,10 +96,11 @@ hr {
   margin: 15px 0;
 }
 
+/* Main Content */
 .main-content {
   padding: 20px;
-  overflow-y: scroll; 
-  height: 100vh; 
+  overflow-y: auto; /* Allow only main content to scroll */
+  height: calc(100vh - 40px); /* Subtract top-bar height */
 }
 
 .game-info {
@@ -122,13 +115,6 @@ hr {
   margin-right: 20px;
 }
 
-/* If you want to use images as backgrounds for game info items, update here */
-.game-info {
-  background-image: url('assets/your-game-info-background.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
 .game-info h2 {
   margin: 0 0 10px 0;
 }
@@ -138,29 +124,7 @@ hr {
   line-height: 1.5;
 }
 
-/* Custom Styles for Responsiveness */
-@media (max-width: 768px) {
-  .top-bar {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .search-box input {
-    width: 100%;
-  }
-
-  .game-info {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .game-info img {
-    margin-right: 0;
-    margin-bottom: 15px;
-  }
-}
-
-/* Sidebar Styles */
+/* Sidebar */
 .sidebar {
   position: fixed;
   top: 0;
@@ -199,10 +163,6 @@ hr {
   margin: 20px 0;
 }
 
-.sidebar-menu li {
-  padding: 10px 15px;
-}
-
 .sidebar-menu li a {
   color: #ffffff;
   text-decoration: none;
@@ -227,4 +187,24 @@ hr {
 
 .sidebar-toggle:hover {
   transform: scale(1.1);
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #000000, #500000);
+  border-radius: 100vw;
+  border: 2px solid transparent; 
+  background-clip: padding-box; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #300000, #800000);
 }
