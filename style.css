@@ -11,6 +11,7 @@ body {
   background-color: #181818;
   color: #ffffff;
   line-height: 1.6;
+  overflow-y: scroll;  /*  Add this line to force the scrollbar */
 }
 
 .top-bar {
