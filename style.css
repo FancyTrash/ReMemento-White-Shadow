@@ -103,7 +103,8 @@ hr {
 
 .main-content {
   padding: 20px;
-  overflow-y: scroll;  /* Keep this line */
+  overflow-y: scroll; 
+  height: 100vh; 
 }
 
 .game-info {
