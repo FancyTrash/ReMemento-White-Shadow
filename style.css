@@ -15,6 +15,7 @@ body {
   background-color: #181818;
   color: #ffffff;
   line-height: 1.6;
+  overflow-x: hidden; /* Disable horizontal scrollbar */
 }
 
 /* Arrow Styles */
@@ -102,6 +103,7 @@ body {
 .main-content {
   padding: 20px;
   overflow-y: auto;
+  overflow-x: hidden; /* Disable horizontal scrollbar */
 }
 
 .game-info {
