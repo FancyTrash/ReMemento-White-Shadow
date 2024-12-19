@@ -23,7 +23,7 @@ body {
   padding: 3px;
   display: flex;
   align-items: center;
-  position: relative; /* Ensure the search box aligns properly */
+  position: relative;
   box-sizing: border-box; 
   height: 40px;  
   line-height: 40px;  
@@ -98,8 +98,9 @@ hr {
 /* Main Content */
 .main-content {
   padding: 20px;
-  overflow-y: auto; /* Allow only main content to scroll */
-  height: calc(100vh - 40px); /* Subtract top-bar height */
+  max-height: calc(100vh - 40px); /* Limit the height to the viewport minus top bar */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  display: block; /* Ensure it doesn't break */
 }
 
 .game-info {
