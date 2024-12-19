@@ -49,13 +49,16 @@ body {
 }
 
 .search-box {
-  display: none;
+  display: none; 
   padding: 8px;  
   border-radius: 5px;
   background-color: #282828;
   color: white;
   border: 0px solid #555;
   align-items: center;
+  position: absolute; 
+  top: 100%; 
+  right: 0; 
 }
 
 .search-box input {
