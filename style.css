@@ -24,9 +24,9 @@ body {
   line-height: 25px; 
 }
 
-.top-bar * { /* Added rule to reset child element heights */
-  height: auto;
-  min-height: 0; 
+.top-bar * { 
+  height: auto !important; /* Added !important */
+  min-height: 0 !important; /* Added !important */
 }
 
 .title {
