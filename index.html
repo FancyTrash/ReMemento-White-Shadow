@@ -4,53 +4,192 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ReMemento-White-Shadow</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="scrollbar/scroll.css">
+  <style>
+    /* General Reset */
+    body, html {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', Arial, sans-serif;
+      color: white;
+      background: linear-gradient(135deg, #1c1c1c, #121212);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      background: linear-gradient(135deg, #222, #1a1a1a);
+      height: 60px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: linear-gradient(135deg, #1a1a1a, #111);
+      width: 80px;
+      position: fixed;
+      top: 60px;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .sidebar-icon {
+      margin: 15px 0;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #2a2a2a, #1e1e1e);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .sidebar-icon img {
+      max-width: 70%;
+      max-height: 70%;
+    }
+
+    .sidebar-icon:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px rgba(100, 100, 255, 0.7);
+      background: linear-gradient(135deg, #4a4a4a, #2e2e2e);
+    }
+
+    /* Main Content */
+    .main-content {
+      margin-top: 60px;
+      margin-left: 80px;
+      padding: 20px;
+      flex: 1;
+      overflow-y: auto;
+      height: calc(100vh - 60px);
+    }
+
+    /* Content Panel */
+    .game-info {
+      position: relative;
+      background: rgba(34, 34, 34, 0.9);
+      padding: 20px;
+      width: 20%; /* Match the gradient's width */
+      height: 50%; /* Match the gradient's height */
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+      overflow: hidden;
+    }
+
+    .game-info::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%; /* Fully cover the box width */
+      height: 100%; /* Fully cover the box height */
+      background: linear-gradient(to left, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+      pointer-events: none;
+      border-radius: inherit;
+    }
+
+    /* Scroll Arrow */
+    .scroll-arrow {
+      position: fixed;
+      bottom: 20px;
+      left: calc(50% + 40px);
+      transform: translateX(-50%);
+      font-size: 24px;
+      color: white;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    }
+
+    .scroll-arrow.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Hide Scrollbar */
+    .main-content::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
 </head>
 <body>
+  <!-- Top Bar -->
   <div class="top-bar">
-    <span class="title">Demo</span>  
+    <span class="title">ReMemento</span>
+    <div class="menu-icon">☰</div>
+  </div>
 
-    <div class="search-icon">
-      <button class="search-button" id="searchButton">&#128269;</button>
-      <div class="search-box" id="searchBox">
-        <input type="text" placeholder="Search..." />
-        <button class="close-button" id="closeButton">&#215;</button>
-      </div> 
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-icon">
+      <img src="assets/icon1.png" alt="Icon 1">
     </div>
-
-    <div class="sidebar-toggle" id="sidebarToggle">⋯</div>
-    <div class="sidebar" id="sidebar">
-      <div class="sidebar-header">
-        <span>Menu</span>
-        <button class="close-sidebar" id="closeSidebar">&times;</button>
-      </div>
-      <ul class="sidebar-menu">
-        <li><a href="#">Option 1</a></li>
-        <li><a href="#">Option 2</a></li>
-        <li><a href="#">Option 3</a></li>
-      </ul>
-    </div> 
+    <div class="sidebar-icon">
+      <img src="assets/icon2.png" alt="Icon 2">
+    </div>
+    <div class="sidebar-icon">
+      <img src="assets/icon3.png" alt="Icon 3">
+    </div>
+    <div class="sidebar-icon">
+      <img src="assets/icon4.png" alt="Icon 4">
+    </div>
   </div>
 
-  <div class="banner" id="myBanner"> 
-    <img src="assets/1500x500 1.jpg" alt="Game Banner"> 
-  </div>
-
-  <hr>
-
-  <div class="main-content"> 
+  <!-- Main Content -->
+  <div class="main-content">
     <div class="game-info">
-      <img src="assets/H0E0mS7Y_400x400.png" alt="Game Icon">
-      <div>
-        <h2>Demo</h2>
-        <p>Demo.</p>
-      </div>
+      <h2>Game Info</h2>
+      <p>Welcome to ReMemento's world!</p>
     </div>
-
-    <div style="height: 2000px;"></div> 
+    <div style="height: 2000px;"></div> <!-- Placeholder for more content -->
+    <div class="scroll-arrow">ᐯ</div>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    const mainContent = document.querySelector('.main-content');
+    const scrollArrow = document.querySelector('.scroll-arrow');
+
+    mainContent.addEventListener('scroll', () => {
+      const scrollTop = mainContent.scrollTop;
+      const scrollHeight = mainContent.scrollHeight;
+      const clientHeight = mainContent.clientHeight;
+
+      // Check if at the bottom
+      if (scrollTop + clientHeight >= scrollHeight - 10) {
+        scrollArrow.classList.add('hidden');
+      } else {
+        scrollArrow.classList.remove('hidden');
+      }
+    });
+  </script>
 </body>
 </html>
